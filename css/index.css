@@ -5,12 +5,12 @@
 }
 /* 导航条背景和样式 */
 .navbar {
-    background-color: rgb(3, 19, 123);
+    background-color: rgb(85, 89, 96);
     height: 80px; /* 调整导航栏高度 */
     display: flex;
     justify-content: center; /* 居中内容 */
     align-items: center; /* 垂直居中内容 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影以增加层次感 */
+    box-shadow: 0 2px 5px rgba(82, 82, 82, 0.2); /* 添加阴影以增加层次感 */
     width: 100%;
     z-index: 1000; /* 保证导航栏位于其他内容上方 */
     position: fixed;
@@ -35,7 +35,8 @@
     font-size: 18px; /* 文字大小 */
     padding: 10px 20px; /* 添加内边距，使文字和背景的间距更大 */
     transition: background-color 0.3s ease, color 0.3s ease; /* 鼠标悬停时的过渡效果 */
-    border-radius: 8px
+    border-radius: 8px;
+    font-family:Arial, sans-serif;
 }
 
 /* 鼠标悬停时的样式 */
@@ -58,4 +59,26 @@ header {
 /* 为了让页面内容不被导航栏遮挡，给页面添加顶部外边距 */
 body {
     margin-top: 80px; /* 与导航栏高度保持一致 */
+     opacity: 0.8;
+     position: relative; /* 确保伪元素与body相关 不理解，记得问???*/
+     
+}
+body::before {
+    content: ''; /* 创建一个空的伪元素 */
+    position: fixed; /* 使伪元素覆盖整个页面 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../image/xiaoli2.jpg') center no-repeat; /* 背景图片 */ /*一定要打两个点！表示上一个文件夹！*/
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    opacity: 0.9; /* 设置背景图片透明度 */
+    z-index: -1; /* 确保伪元素位于内容的后面 */
+}
+
+#searchBar {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
 }

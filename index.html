@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My blog</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="css/index.css">
+    
 </head>
 <body>
     <!--导航条-->
@@ -12,15 +13,22 @@
 <header>
     <nav class="navbar">
         <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+        <input type="text" id="searchBar" placeholder="Search...">
     </nav>
+
 </header>
 
     <!---->
+
+
+
+
     
+    <script src="js/index.js"></script>
 </body>
 </html>
