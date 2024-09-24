@@ -3,30 +3,59 @@
     padding: 0;
 
 }
-nav {
-    background: url('image\yezi.png') no-repeat center center;
-    background-size: cover; /* 确保背景图片覆盖整个导航栏 */
-    background-position: center; /* 确保图片居中显示 */
-    background-repeat: no-repeat; /* 防止图片重复 */
-    height: 15%; /* 设置导航栏的高度 */
-    opacity: 0.9; /* 设置整体透明度 */
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* 导航条背景和样式 */
+.navbar {
+    background-color: rgb(3, 19, 123);
+    height: 80px; /* 调整导航栏高度 */
     display: flex;
-    justify-content: space-around; /* 导航项分布在导航栏内 */
-    align-items: center;
-    height: 100%;
-  }
-  
-  nav ul li a {
-    color: white; /* 设置导航项文字颜色为白色，以便与背景图片对比 */
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    font: "kaiti";
-  }
-  
+    justify-content: center; /* 居中内容 */
+    align-items: center; /* 垂直居中内容 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影以增加层次感 */
+    width: 100%;
+    z-index: 1000; /* 保证导航栏位于其他内容上方 */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 去除默认列表样式 */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* 水平排列列表项 */
+    justify-content: space-around; /* 控制导航项之间的间距 */
+    width: 60%; /* 调整导航栏宽度，或根据需求调整 */
+}
+
+/* 导航链接样式 */
+.navbar a {
+    color: white; /* 设置文字为白色 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 18px; /* 文字大小 */
+    padding: 10px 20px; /* 添加内边距，使文字和背景的间距更大 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 鼠标悬停时的过渡效果 */
+    border-radius: 8px
+}
+
+/* 鼠标悬停时的样式 */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停时添加轻微背景色 */
+    color: #FFD700; /* 悬停时文字颜色变化 */
+    border-radius: 25px; /* 圆角设置 */
+}
+
+
+/* 设置导航条在滚动时保持在顶部 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 保证导航栏位于其他内容之上 */
+}
+
+/* 为了让页面内容不被导航栏遮挡，给页面添加顶部外边距 */
+body {
+    margin-top: 80px; /* 与导航栏高度保持一致 */
+}
