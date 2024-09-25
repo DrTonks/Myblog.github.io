@@ -186,3 +186,47 @@ body::before {
 .idcard div h1 a{
     text-decoration: none;
 }
+.activepic{
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    margin: auto;
+    /* 设置3d变化 */
+    transform-style: preserve-3d;
+    /* 添加透视效果 */
+    perspective: 1000px;
+    backface-visibility: hidden;
+    
+}
+.activepic .box1{
+    transform-style: preserve-3d; /* 不加这个会翻折 */
+    backface-visibility: hidden;
+    transition: 0.3s;
+    width: 250px;
+    height: 400px;
+    margin: 10px;
+}
+.activepic:hover .box1 {
+    transform: rotateY(15deg);
+
+}
+ .activepic .box1 img{
+    transform-style: preserve-3d;/* 不加这个会翻折 */
+     backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius:  15px; 
+   
+} 
+ /* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
+        并放大一点二五倍，加个阴影 */
+.activepic .box1:hover {
+     transform: rotateY(0deg) scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+     z-index: 1;
+}
+.activepic .box1:hover~.box1 {
+    transform: rotateY(-20deg);
+}
