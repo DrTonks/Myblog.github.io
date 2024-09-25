@@ -8,20 +8,35 @@
     
 </head>
 <body>
-    <!--导航条-->
+    <!--桌面导航栏-->
   
 <header>
     <nav class="navbar">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <input type="text" id="searchBar" placeholder="Search...">
+        <input type="text" id="searchBar" placeholder="搜索...">
     </nav>
 
 </header>
+    <!-- 手机导航栏-->
+    <div id="phonenav">
+        <button class="openbut" onclick="getnav">☰ Menu</button>
+   </div>
+
+    <div id="overlay" class="overlay"></div><!--蒙版-->>
+    
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="closebut" onclick="getnav">x</a>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        
+    </div>
     <!---->
 <div class="image">
     <div>

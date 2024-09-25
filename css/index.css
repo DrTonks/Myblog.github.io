@@ -3,7 +3,7 @@
     padding: 0;
 
 }
-/* 导航条背景和样式 */
+/* 桌面导航条背景和样式 */
 .navbar {
     background-color: rgb(85, 89, 96);
     height: 80px; /* 调整导航栏高度 */
@@ -55,10 +55,8 @@ header {
     width: 100%;
     z-index: 1000; /* 保证导航栏位于其他内容之上 */
 }
-
-/* 为了让页面内容不被导航栏遮挡，给页面添加顶部外边距 */
 body {
-    margin-top: 80px; /* 与导航栏高度保持一致 */
+    margin-top: 80px;
      opacity: 0.8;
      position: relative; /* 确保伪元素与body相关 不理解，记得问???*/
      
@@ -75,10 +73,68 @@ body::before {
     opacity: 0.9; /* 设置背景图片透明度 */
     z-index: -1; /* 确保伪元素位于内容的后面 */
 }
-
+@media only screen and (max-width: 768px) {
+    body::before {
+        background: url('https://tonks-blog-1329849192.cos.ap-chengdu.myqcloud.com/xiaoli.png') center no-repeat; /* 移动端背景图片 */
+        background-size: cover; /* 确保背景图片在移动端也覆盖整个页面 */
+    }
+}
 #searchBar {
     width: 200px;
     padding: 5px;
     border-radius: 5px;
     border: none;
+}
+.phonenav{
+    background-color: rgb(85, 89, 96);
+    display: none;
+
+}
+.sidebar{
+    background-color: rgb(85, 89, 96);
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 0;
+    overflow-x: hidden;/*不加这个会有字，因为盒子里的元素没隐藏*/
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 2; /* 确保侧边栏在蒙版之上 */
+    height: 100%;
+}
+.sidebar a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 8px 8px 8px 32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+    display: block;
+}
+
+.sidebar .closebut{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* 黑色半透明 */
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        display: none;
+    }
+    .phonenav{
+
+        display: block;
+    }
 }
