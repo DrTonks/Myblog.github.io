@@ -79,20 +79,8 @@ body::before {
         background-size: cover; /* 确保背景图片在移动端也覆盖整个页面 */
     }
 }
-#searchBar {
-    width: 200px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    display: none;
-    width:0;
-}
-.searchicon{
-    background-color: rgb(85, 89, 96,0.2);
-    text-decoration: none;
-    font-size: 25px;
-    border: none;
-}
+
+
 /*手机端导航栏*/
 .phonenav{
     background-color: rgb(85, 89, 96,0.1);
@@ -133,7 +121,7 @@ body::before {
     right: 20px;
     font-size: 36px
 }
-.overlay{
+.overlay{/*手机版导航打开后蒙版*/
     position: fixed;
     top: 0;
     left: 0;
@@ -164,4 +152,25 @@ body::before {
     .openbut {
         display: block;
     }
+}
+.navbar .active{/*更高级的navbar影响到了active，需要加上.navbar*/
+    color: yellow;
+    font-weight: bold;/*高亮*/
+}
+.idcard{
+    background-color: rgb(191, 192, 194,0.6);
+    width: fit-content;
+    display: flex;
+    flex-direction: column; /* 纵向排列内容 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    padding: 20px; /* 内边距，增加一点间距 */
+    border-radius: 5px; /* 圆角效果 */
+    margin: auto;
+}
+.idcard .idimage{
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+
 }

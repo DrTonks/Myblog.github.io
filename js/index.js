@@ -1,11 +1,5 @@
-   const searchBar = document.getElementById('searchBar');
-    searchBar.addEventListener('input', function() {
-        let query = searchBar.value.toLowerCase();
-        // 在这里实现搜索逻辑
-        console.log('Searching for:', query);
-    })
-    
-    function getnav(){
+ //打开手机端导航栏
+ function getnav(){
         let sidebar =document.getElementById("sidebar");
         let overlay =document.getElementById("overlay");
         if (sidebar.style.width === "250px"){
@@ -17,17 +11,17 @@
             overlay.style.display = "block";
         }
 
-    }
-    function searchicon(){
-        let searchBar=document.getElementById("searchBar")
-        if (searchBar.style.width ==="150px"){
-            searchBar.style.width="0";
-            searchBar.style.display="none";
+    }  
 
-        }else{
-            searchBar.style.width="150px";
-            searchBar.style.display="block"
-        }
-        
-        
+ /*// 获取当前页面的 URL 路径
+ const currentPath = window.location.pathname;
+
+ const navLinks = document.querySelectorAll('.navbar a');
+
+  navLinks.forEach(link => {
+    if(link.getAttribute('href') === currentPath) {
+        link.classList.add('active');  
     }
+});
+能实现功能，但是比较麻烦，故采用静态active
+*/
