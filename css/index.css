@@ -158,19 +158,31 @@ body::before {
     font-weight: bold;/*高亮*/
 }
 .idcard{
-    background-color: rgb(191, 192, 194,0.6);
+    background-color: rgba(87, 87, 87, 0);
     width: fit-content;
     display: flex;
-    flex-direction: column; /* 纵向排列内容 */
+    flex-direction: row; 
     align-items: center; /* 水平居中 */
     justify-content: center; /* 垂直居中 */
     padding: 20px; /* 内边距，增加一点间距 */
     border-radius: 5px; /* 圆角效果 */
     margin: auto;
+    
 }
 .idcard .idimage{
     border-radius: 50%;
     width: 200px;
     height: auto;
+    display: flex;
 
+}
+.idcard div {
+    font-size: 30px; /* 调整文字大小 */
+    color: rgb(251, 251, 251);
+    margin: 60px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.idcard div h1 a{
+    text-decoration: none;
 }
