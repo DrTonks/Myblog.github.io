@@ -188,7 +188,7 @@ body::before {
 }
 .activepic{
     position: relative;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*应该是用来允许盒子在行中排列？？？反正没了就不行*/
     display: flex;
     align-items: center; /* 水平居中 */
     justify-content: center; /* 垂直居中 */
@@ -198,6 +198,7 @@ body::before {
     /* 添加透视效果 */
     perspective: 1000px;
     backface-visibility: hidden;
+   
     
 }
 .activepic .box1{
@@ -207,19 +208,29 @@ body::before {
     width: 250px;
     height: 400px;
     margin: 10px;
+    position: relative; /* 允许子元素定位 */
 }
 .activepic:hover .box1 {
     transform: rotateY(15deg);
 
 }
- .activepic .box1 img{
+ .activepic .box1 .image1 img{
     transform-style: preserve-3d;/* 不加这个会翻折 */
      backface-visibility: hidden;
     width: 100%;
     height: 100%;
     border-radius:  15px; 
+    object-fit: cover; /* 保持比例，裁剪以填充盒子/但是不起作用，为什么？ */
    
 } 
+.activepic .box1 .image1{
+    width: 100%;  /* 确保 .image1 与 box1 大小一致 */
+    height: 100%;
+
+}
+
+
+
  /* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
         并放大一点二五倍，加个阴影 */
 .activepic .box1:hover {
@@ -228,5 +239,5 @@ body::before {
      z-index: 1;
 }
 .activepic .box1:hover~.box1 {
-    transform: rotateY(-20deg);
+    transform: rotateY(-15deg);
 }
