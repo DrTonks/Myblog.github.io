@@ -87,9 +87,11 @@ body::before {
 }
 /*手机端导航栏*/
 .phonenav{
-    background-color: rgb(85, 89, 96);
+    background-color: rgb(85, 89, 96,0.1);
     display: none;
-
+    top: 0;
+    position: fixed;
+    
 }
 .openbut{
     display: none;
