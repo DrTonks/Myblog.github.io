@@ -18,3 +18,16 @@
         }
 
     }
+    function searchicon(){
+        let searchBar=document.getElementById("searchBar")
+        if (searchBar.style.width ==="150px"){
+            searchBar.style.width="0";
+            searchBar.style.display="none";
+
+        }else{
+            searchBar.style.width="150px";
+            searchBar.style.display="block"
+        }
+        
+        
+    }
