@@ -90,6 +90,9 @@ body::before {
     display: none;
 
 }
+.openbut{
+    display: none;
+}
 .sidebar{
     background-color: rgb(85, 89, 96);
     font-family: 'Roboto', sans-serif;
@@ -136,5 +139,8 @@ body::before {
     .phonenav{
 
         display: block;
+    }
+    .closebut{
+        display: none
     }
 }
