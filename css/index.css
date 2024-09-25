@@ -141,6 +141,6 @@ body::before {
         display: block;
     }
     .closebut{
-        display: none
+        display: block;
     }
 }
