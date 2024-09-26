@@ -1,0 +1,11 @@
+.AboutMe{
+    background-image: url("");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 100px;
+    z-index: 3;
+    margin: 0 auto;
+    text-align: center;
+}
