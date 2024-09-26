@@ -1,0 +1,17 @@
+.title {
+    position: relative;
+}
+
+.title  {
+    font-size: 60px;
+    font-weight: bold;
+    /* color: transparent; 必须加！！！！！ */
+    margin: 0;
+    text-align: center;
+    position: relative;
+    background-image: url('https://tonks-blog-1329849192.cos.ap-chengdu.myqcloud.com/IMG_0353.JPG');
+    background-size: cover; 
+    background-position: center; 
+    -webkit-background-clip: text; 
+    background-clip: text;  
+}

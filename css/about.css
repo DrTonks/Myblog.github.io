@@ -1,12 +1,29 @@
 .AboutMe{
-    background-image: url("image/ren.JPG");
-    background-size: cover;
+    
+    position: relative;
+}
+.AboutMe h1{
+    background: linear-gradient(270deg, #d2eded, #6cffff, #f9f9f9);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent; /* 文字透明 */
     font-size: 100px;
-    z-index: 3;
-    margin: 0 auto;
+    z-index: 40;
+    margin: 0 ;
     text-align: center;
     font-weight: bold;
+    animation: flow 4s linear infinite; /* 设置动画 */
+    background-size: auto; /* 设置背景大小 */
+    background-size: 300% 300%; /* 背景大小 */
+}
+
+
+
+@keyframes flow {
+    0% {
+        background-position: 0% 50%; /* 动画开始位置 */
+    }
+    100% {
+        background-position: 100% 50%; /* 动画结束位置 */
+    }
 }
