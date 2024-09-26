@@ -1,5 +1,5 @@
 .AboutMe{
-    background-image: url("");
+    background-image: url("image/ren.JPG");
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -8,4 +8,5 @@
     z-index: 3;
     margin: 0 auto;
     text-align: center;
+    font-weight: bold;
 }
