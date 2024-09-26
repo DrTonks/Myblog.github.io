@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar"class="navbar" >
+            <ul>
+                <li><a href="index.html" >首页</a></li>
+                <li><a href="about.html">简介</a></li>
+                <li><a href="#" class="active">文章</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            
+        </nav>
+       
+    </header>
+        <!-- 手机导航栏-->
+        <div class="phonenav">
+            <button class="openbut" onclick="getnav()">☰</button>
+       </div>
+    
+        <div id="overlay" class="overlay"></div><!--蒙版-->
+        
+        <div id="sidebar" class="sidebar">
+            <a  class="closebut" onclick="getnav()">☰</a>
+            <a href="index.html">首页</a>
+            <a href="about.html">简介</a>
+            <a href="#" onclick="getnav()" class="active">文章</a>
+            <a href="contact.html">联系</a>
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script src="js/index.js"></script>
+</body>
+</html>

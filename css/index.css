@@ -3,8 +3,22 @@
     padding: 0;
 
 }
-
-/* 桌面导航条背景和样式 */
+hr {
+    border: none; 
+    height: 2px; 
+    background-color: rgba(130, 127, 127, 0.549);
+}
+.dp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Microsoft JhengHei';
+    background-color: rgba(163, 163, 163, 0.549);
+    color: rgb(246, 242, 140);
+    font-weight: bold;
+}
+/*桌面端*/
 .navbar {
     background-color: rgb(86, 93, 105);
     height: 80px; 
@@ -26,7 +40,7 @@
     width: 60%; 
 }
 .navbar a {
-    color: white; /* 设置文字为白色 */
+    color: white; 
     text-decoration: none; /*这才是下划线，一直以为是emphasis qwq*/
     font-size: 18px; 
     padding: 10px 20px;
@@ -72,7 +86,16 @@ body::before {
         background: url('https://tonks-blog-1329849192.cos.ap-chengdu.myqcloud.com/xiaoli.png') center no-repeat; /* 移动端背景图片 */
         background-size: cover;
     }
-    
+    .dp{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 30px;
+        font-family: 'songti';
+        background-color: rgba(163, 163, 163, 0.549);
+        color: rgb(11, 11, 11);
+        font-weight: 900;
+    }
 }
 
 
@@ -113,7 +136,7 @@ body::before {
 .sidebar .closebut{
     position: absolute;
     top: 0;
-    right: 20px;
+    right: 5px;
     font-size: 36px
 }
 
@@ -150,7 +173,8 @@ body::before {
 
 }
 #phoneCard h1{
-    color: rgb(6, 193, 239);
+    color: rgb(251, 255, 0);
+    font-weight: bold;
 }
 /* 手机部分调整 */
 @media screen and (max-width:768px) {
@@ -169,18 +193,14 @@ body::before {
         text-decoration: none;
         z-index: 2;
     }
-
-    
-
-    
     .idcard div h1{
         display: none;
         position: absolute;
         text-decoration: none;
     }
-
-
 }
+
+
 
 .navbar .active{
     color: yellow;
@@ -208,8 +228,6 @@ body::before {
     width: 200px;
     height: auto;
     display: flex;
-    
-
 }
 .idcard div {
     font-size: 30px; 
@@ -242,28 +260,54 @@ body::before {
     position: relative; 
     display: flex;
     justify-content: center;
-    
+    overflow: hidden;
 }
+.activepic .box1 a{
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+}
+
 .activepic .box1 .content{
     position: absolute;
     bottom: 0;
     padding: 15px;
+    opacity: 0; /* 隐藏 */
+    transition: opacity 0.3s; 
     
 }
 .activepic .box1 .content h2{
     z-index: 2;
     font-family: 'songti';
+    
 }
+.activepic .box1 .content .h2-2{ 
+    font-weight: bold;
+    color: #f5f5f4; 
+}
+.activepic .box1 .content .h2-1{ 
+    font-weight: bold;
+    color: #f5f5f4; 
+}
+
+
+
 .activepic:hover .box1 {
     transform: rotateY(15deg);
 }
+
+.activepic .box1:hover .content {
+    opacity: 1; 
+}
+
+
  .activepic .box1 .image1 img{
     transform-style: preserve-3d;/* 不加这个会翻折(9.26:实测加了也没用,原因不在这里,是因为超过盒子部分被隐藏了,看着像翻折) */
     width: 100%;
     height: 100%;
     border-radius:15px; 
     object-fit: cover; 
-    /* 保持比例，裁剪以填充盒子/9.25:但是不起作用，为什么？9.26: */
+    /* 保持比例，裁剪以填充盒子/9.25:但是不起作用，为什么？9.26:可以了 */
    
 } 
 /*无效*/
@@ -276,7 +320,7 @@ body::before {
 
  /* 来点花样 */
 .activepic .box1:hover {
-     transform: rotateY(0deg) scale(1.25);
+     transform: rotateY(0deg) scale(1.1);
     box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
      z-index: 1;
 }
@@ -288,7 +332,7 @@ body::before {
         transform: rotateY(0deg);
     }
     .activepic .box1:hover {
-        transform: rotateY(0deg) scale(1.25);
+        transform: rotateY(0deg) scale(1.1);
        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
         z-index: 1;
    }
@@ -329,7 +373,20 @@ body::before {
 body {
     margin-top: 0;
      opacity: 0.8;
-     position: relative;
-     
+     position: relative;     
+}
+.activepic .box1 .content {
+    opacity: 1; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #f5f5f4;
+    
+}
+.activepic .box1 .content .h2-3{
+    opacity: 1; 
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    
 }
 }
