@@ -1,6 +1,7 @@
 .AboutMe{
-    
+    z-index: 0;
     position: relative;
+    margin-top: 30px;
 }
 .AboutMe h1{
     background: linear-gradient(270deg, #d2eded, #6cffff, #f9f9f9);
@@ -8,7 +9,7 @@
     -webkit-background-clip: text;
     color: transparent; /* 文字透明 */
     font-size: 100px;
-    z-index: 40;
+    z-index: 0;
     margin: 0 ;
     text-align: center;
     font-weight: bold;

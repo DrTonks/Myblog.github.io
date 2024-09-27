@@ -150,7 +150,7 @@ body::before {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1;
+    z-index: 2;
     display: none;
     width: 100%;
     height: 100%;
@@ -184,12 +184,14 @@ body::before {
     }
     .openbut {
         display: block;
+        z-index: 1;
+        
     }
     #phoneCard{
         display: flex ;
         justify-content: center;
         text-decoration: none;
-        z-index: 2;
+        z-index: 1;
     }
     .idcard div h1{
         display: none;

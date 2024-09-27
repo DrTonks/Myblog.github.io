@@ -1,13 +1,75 @@
-.title {
+hr {
+    border: none; 
+    height: 2px; 
+    background-color: rgb(130, 127, 127);
+}
+.title #title{
     position: relative;
+    margin-top: 40px;
 }
 
 .title  {
     font-size: 30px;
     font-weight: bold;
-    color: rgba(56, 246, 173, 0.781); 
+    color: rgba(255, 247, 0, 0.781); 
     margin: 0;
     text-align: center;
     position: relative;
+    background-color: rgba(250, 235, 215, 0.453);
+}
+.sidebar-1 {
+    background-color: rgba(250, 235, 215, 0.453);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    padding: auto;
+}
+.sidebar-1 .innerdiv1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+.sidebar-1 .innerdiv1 h3{
    
+    text-align: center;
+}
+
+.sidebar-1 .innerdiv2{
+    margin: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.sidebar-1 .innerdiv2 a{
+    font-size: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: 'kaiti';
+    align-items: center;/*死活不对齐 9.27：已解决，语句如左*/
+    display: flex; 
+    
+}
+.sidebar-1 .innerdiv2 a .innerimg{
+    width: 30px;
+    height: 30px;
+    /* background-size: cover; 语句无用：ybb,根本没用到background*/
+    object-fit: cover;/*记得查*/
+}
+
+
+
+
+body::before {
+    opacity: 0.4; 
+    z-index: -1; 
+}
+
+
+@media  screen and (max-width:768px) {
+    .sidebar-1{
+        display: none;
+    }
 }
