@@ -174,7 +174,7 @@ body::before {
     color: rgb(251, 255, 0);
     font-weight: bold;
 }
-/* 手机部分调整 */
+/* 9.27手机部分调整 */
 @media screen and (max-width:768px) {
     .navbar{
         display: none;
