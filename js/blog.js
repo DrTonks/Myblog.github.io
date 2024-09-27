@@ -34,7 +34,6 @@ links.forEach(link => {
                 behidden.style.visibility='hidden';
                 behidden.style.height='15px';
             });
-            
     });
 });
 

@@ -160,3 +160,22 @@ body::before {
 }
 
 }
+.link .blog:hover {
+    transition: 0.3s;
+    transform: rotateY(0deg) scale(1.01);
+   box-shadow: 0 25px 40px rgba(105, 101, 101, 0.423);
+    z-index: 1;
+}
+.sidebar-1:hover {
+    transition: 0.3s;
+    transform: rotateY(0deg) scale(1.01);
+   box-shadow: 0 25px 40px rgba(70, 70, 70, 0.514);
+    z-index: 1;
+}
+.sidebar-1 .innerdiv2 a:hover {
+    transition: 0.3s;
+    transform: rotateY(0deg) scale(1.03);
+   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.193);
+    z-index: 1;
+    border-radius: 15px;
+}

@@ -15,9 +15,7 @@
 
  /*// 获取当前页面的 URL 路径
  const currentPath = window.location.pathname;
-
  const navLinks = document.querySelectorAll('.navbar a');
-
   navLinks.forEach(link => {
     if(link.getAttribute('href') === currentPath) {
         link.classList.add('active');  
