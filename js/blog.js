@@ -1,7 +1,7 @@
 function title(){
     let title=document.getElementById('title')
     if (window.innerWidth<= 768){
-        title.innerText='NEW！'
+        title.innerText='NEW!'
     }
     else{
         title.innerText='最近文章'
