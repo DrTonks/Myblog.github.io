@@ -283,7 +283,7 @@ body::before {
 }
 .activepic .box1 .content .h2-4{ 
     font-weight: bold;
-    color: #ff0000; 
+    color:  #ff0000; 
 }
 .activepic .box1 .content .h2-3{ 
     font-weight: bold;
@@ -357,6 +357,7 @@ body::before {
     transform-style: preserve-3d;
     perspective: 1000px;
     backface-visibility: hidden;
+   
 }
 .activepic .box1{
     transform-style: preserve-3d; 
@@ -366,6 +367,7 @@ body::before {
     height: 200px;
     margin: 10px;
     position: relative; 
+    
 }
 .idcard{
     background-color: rgba(87, 87, 87, 0);
@@ -385,7 +387,7 @@ body {
 }
 .activepic .box1 .content {
     opacity: 1; 
-    font-size: 16px;
+    font-size: 10px;
     font-weight: bold;
     color: #f5f5f4;
     

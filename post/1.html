@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章加载示例</title>
+    <style>
+        .content {
+            border: 1px solid #ccc;
+           
+            display: none;
+            overflow-y: auto;
+            margin-top: 20px;
+            height: fit-content;
+            width: 900px;
+        }
+
+        a {
+            margin: 10px;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>点击链接查看文章</h1>
+    <div>
+        <a  href="./post/wei.html" class="link" data-file="ml02.html">查看文章 1</a>
+        <a class="link" data-file="article2.html">查看文章 2</a>
+    </div>
+
+    <div class="content" id="contentArea">
+        <h2>选择一个链接以显示文章内容</h2>
+    </div>
+
+    <script>
+        // 获取所有链接
+        const links = document.querySelectorAll('.link');
+        const contentArea = document.getElementById('contentArea');
+
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // 阻止默认链接行为
+                const file = link.getAttribute('data-file'); // 获取要加载的 HTML 文件
+
+                // 使用 Fetch API 加载 HTML 文件
+                fetch(file)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('加载错误');
+                        }
+                        return response.text(); // 将响应转换为文本
+                    })
+                    .then(html => {
+                        contentArea.innerHTML = html; // 更新内容区域
+                        contentArea.style.display="block"
+                    })
+                    .catch(error => {
+                        contentArea.innerHTML = `<p>加载错误: ${error.message}</p>`;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
