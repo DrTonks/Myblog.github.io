@@ -8,5 +8,7 @@ function title(){
         
     }
 }//尝试用js搞定移动端的适配，果然比css隐藏/显示要简单...
+
+
 window.onload = title;
 window.onresize = title;

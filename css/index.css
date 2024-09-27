@@ -281,13 +281,21 @@ body::before {
     font-family: 'songti';
     
 }
+.activepic .box1 .content .h2-4{ 
+    font-weight: bold;
+    color: #ff0000; 
+}
+.activepic .box1 .content .h2-3{ 
+    font-weight: bold;
+    color: #b301ff; 
+}
 .activepic .box1 .content .h2-2{ 
     font-weight: bold;
     color: #f5f5f4; 
 }
 .activepic .box1 .content .h2-1{ 
     font-weight: bold;
-    color: #f5f5f4; 
+    color: #fdff99; 
 }
 
 

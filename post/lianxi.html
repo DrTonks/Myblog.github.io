@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown 动态显示示例</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script> <!-- Markdown 渲染库 -->
+    <style>
+        .sidebar {
+            width: 200px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .item {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin: 5px 0;
+        }
+
+        .item:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="item" data-content="# 文章标题 1\n这是文章 1 的内容。">文章 1</div>
+        <div class="item" data-content="# 文章标题 2\n这是文章 2 的内容。">文章 2</div>
+        <div class="item" data-content="# 文章标题 3\n这是文章 3 的内容。">文章 3</div>
+    </div>
+    <div class="content" id="markdownContent">
+        <h2>选择一篇文章</h2>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        const contentDiv = document.getElementById('markdownContent');
+        const converter = new showdown.Converter(); // 创建 Markdown 转换器
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const markdown = item.getAttribute('data-content'); // 获取对应的 Markdown 内容
+                const html = converter.makeHtml(markdown); // 将 Markdown 转换为 HTML
+                contentDiv.innerHTML = html; // 更新父级 div 的内容
+            });
+        });
+    </script>
+</body>
+</html>
