@@ -19,7 +19,7 @@ let initText = []; // 用于保存初始文本
 function boxtext() {
     let boxtext = document.getElementsByClassName('boxtext');
 
- //做一个保存文本，否则浏览器窗口变动时手机端文本会被保存在电脑端
+ //BUG解决：做一个保存文本，否则浏览器窗口变动时手机端文本会被保存在电脑端
     if (initText.length === 0) {
         for (let i = 0; i < boxtext.length; i++) {
             initText[i] = boxtext[i].innerText;
