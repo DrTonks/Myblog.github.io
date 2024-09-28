@@ -235,6 +235,9 @@
 .box:hover h1{
     opacity: 1;
 }
+.box h1:hover{
+    opacity: 1;
+}
 .box:hover img{
     width: 125%;
     height: 100%;
