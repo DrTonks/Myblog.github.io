@@ -4,6 +4,7 @@
     margin-top: 30px;
 }
 .AboutMe h1{
+    /*并非background-color*/
     background: linear-gradient(270deg, #fff6a1, #6cffff, #ffd47d);
     background-clip: text;
     -webkit-background-clip: text;
@@ -14,8 +15,9 @@
     text-align: center;
     font-weight: bold;
     animation: flow 5s linear infinite; 
-    background-size: auto; 
+   /* 并非auto */
     background-size: 300% 300%; 
+    font-family: 'Lucida Handwriting',sans-serif;
 }
 
 .idbar{
@@ -73,6 +75,36 @@
     width: 100%;
     height: 100%;
 }
+/* @keyframes flow {
+    0% {
+        background-position: 0% 50%; 
+    }
+    100% {
+        background-position: 100% 50%; 
+    }
+
+}  9.26不生效 9.28：添加了照片墙，放在下面，生效*/
+.photowall{
+    font-family: 'kaiti',sans-serif;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(240, 248, 255, 0);
+    align-items: center;
+}
+.photowall h1{
+   
+    background: linear-gradient(45deg, #ffe15df7,#00fff789, #ffe15df7);
+    animation: flow 2s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% 300%; 
+}
 @keyframes flow {
     0% {
         background-position: 0% 50%; 
@@ -82,6 +114,64 @@
     }
 
 }
+.photo{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+.pbody{
+    position: absolute;
+    left: 2.5%;
+    height: fit-content;
+    max-width: 95%;
+
+    column-gap: 15px;
+    column-count: 5;
+}
+.pbody .image{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.pbody .image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.pbody .image h2{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    font-family: 'kaiti';
+    top: 10px;
+    color: #000000;
+    
+}
+.pbody .image:hover h2{
+    opacity: 1;
+}
+@media screen and (max-width : 1200px){
+    .pbody{
+        column-count: 4;
+    } 
+} 
+@media screen and (max-width : 768px){
+    .pbody{
+        column-count: 3;
+    } 
+} 
+@media screen and (max-width : 600px){
+    .pbody{
+        column-count: 2;
+    } 
+}      
+
+
+
+
+
 @media screen and (max-width:768px){
     .idbar{
         display: flex;

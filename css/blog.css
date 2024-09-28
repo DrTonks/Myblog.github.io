@@ -50,7 +50,7 @@ hr {
     font-size: 30px;
     overflow: hidden;
     text-decoration: none;
-    font-family: 'kaiti';
+    font-family: 'kaiti',sans-serif;
     align-items: center;/*死活不对齐 9.27：已解决，语句如左*/
     display: flex; 
     
