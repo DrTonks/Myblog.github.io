@@ -229,16 +229,16 @@
     opacity: 0;
     transition: 0.6s;
 }
-.box:hover{
+.box:active{
     flex-basis: 50%;
 }
-.box:hover h1{
+.box:active h1{
     opacity: 1;
 }
-.box h1:hover{
+.box h1:active{
     opacity: 1;
 }
-.box:hover img{
+.box:active img{
     width: 125%;
     height: 100%;
 }
