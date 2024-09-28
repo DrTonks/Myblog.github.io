@@ -41,6 +41,7 @@
     transition: 0.5s;
     border-radius: 15px;
     height: 600px;
+    overflow-wrap:break-word;
 }
 .box img{
     width: 200%;
@@ -61,9 +62,11 @@
 }
 .box h1{
     position: absolute;
-    top: 0;
+    top: 20px;
+    
     opacity: 0;
     transition: 0.6s;
+   
 }
 .box:hover{
     flex-basis: 40%;
@@ -74,6 +77,7 @@
 .box:hover img{
     width: 100%;
     height: 100%;
+    opacity: 0.5;
 }
 /* @keyframes flow {
     0% {
@@ -83,7 +87,7 @@
         background-position: 100% 50%; 
     }
 
-}  9.26不生效 9.28：添加了照片墙，放在下面，生效*/
+}  9.26:不生效 9.28：添加了照片墙，放在下面，生效，生效原因未知*/
 .photowall{
     font-family: 'kaiti',sans-serif;
     font-size: 25px;
@@ -207,7 +211,7 @@
     width: 100%;
     height: 20%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .box span{
     font-size: 30px;
