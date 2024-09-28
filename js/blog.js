@@ -18,7 +18,7 @@ const behidden = document.getElementById('hide');
 
 links.forEach(link => {
     link.addEventListener('click', (event) => {
-        event.preventDefault(); //可略？
+        // event.preventDefault(); //9.28：可略:把链接改成当前页面#
         const file = link.getAttribute('blogfile'); 
         
         fetch(file)

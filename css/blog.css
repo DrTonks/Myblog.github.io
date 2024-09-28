@@ -6,6 +6,9 @@ hr {
     height: 2px; 
     background-color: rgb(130, 127, 127);
 }
+.navbar{
+    background-color: rgba(86, 93, 105, 0.564)
+}
 .title #title{
     position: relative;
     margin-top: 40px;
