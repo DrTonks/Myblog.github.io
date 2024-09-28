@@ -101,12 +101,12 @@ body::before {
 
 
 /*手机端导航栏*/
-.phonenav{
+#phonenav{
     background-color: rgb(85, 89, 96,0.1);
     display: none;
     top: 0;
     position: fixed;
-    
+    left: 0;
 }
 .openbut{
     display: none;
@@ -120,7 +120,7 @@ body::before {
     overflow-x: hidden;/*不加这个会有字，因为盒子里的元素没隐藏*/
     transition: 0.3s;
     padding-top: 60px;
-    z-index: 10; 
+    z-index: 90999; 
     height: 100%;
 }
 .sidebar a{
@@ -179,8 +179,9 @@ body::before {
     .navbar{
         display: none;
     }
-    .phonenav{
+    #phonenav{
         display: block;
+        z-index: 3000;
     }
     .openbut {
         display: block;
