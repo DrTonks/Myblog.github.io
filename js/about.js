@@ -14,18 +14,16 @@
 // //因为工程量不大，而且人笨，所以用这种办法，空间换时间，轻喷qwq
 // window.onload = boxtext;
 // window.onresize = boxtext;
-let initText = []; // 用于保存初始文本
 
+//BUG解决：做一个保存文本，否则浏览器窗口变动时手机端文本会被保存在电脑端
+let initText = []; 
 function boxtext() {
     let boxtext = document.getElementsByClassName('boxtext');
-
- //BUG解决：做一个保存文本，否则浏览器窗口变动时手机端文本会被保存在电脑端
     if (initText.length === 0) {
         for (let i = 0; i < boxtext.length; i++) {
             initText[i] = boxtext[i].innerText;
         }
     }
-    //手机端文本
     if (window.innerWidth <= 768) {
         boxtext[0].innerText = '是一名来自福建的大一新生。\n网名的来源是小学期间同学们用哈利波特里面的名字来相互称呼对方，并且沿用至今。\n（由于毕业卡片上面同学给我错写的英文名，后来一度把Tanks当作尼法朵拉的姓氏qwq）';
         boxtext[1].innerText = '喜欢写作。偶尔有点子了就去作家助手上面写点玩意儿放松。童年梦想是成为一名作家，现在也是。\n喜欢和同学们在一起玩，但是不喜欢出门，也不喜欢参与太多社交活动（比如班上团建）';
@@ -36,7 +34,5 @@ function boxtext() {
             boxtext[i].innerText = initText[i]; 
     }
 }}
-
-
 window.addEventListener('resize', boxtext);
 boxtext();

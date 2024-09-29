@@ -156,7 +156,7 @@ body::before {
     height: 100%;
 }
 .openbut{
-    background-color: rgb(85, 89, 96,0.2);
+    background-color: rgba(85, 89, 96, 0.426);
     text-decoration: none;
     font-size: 25px;
     display: none;
@@ -212,31 +212,152 @@ body::before {
 /* 名片（？） */
 .idcard{
     background-color: rgba(87, 87, 87, 0);
-    width: fit-content;
-    display: flex;
-    flex-direction: row; 
+    width: 100%;
+    display: block;
+    height: 80vh;
+    position: relative;
     
-    align-items: center; /*这个语句无效.??? */
-
-    justify-content: center; 
-    padding: 20px; 
     border-radius: 5px; 
-    margin: auto;
+    overflow: hidden;
+
+}
+
+
+.box3{
+    display: flex;
+    width: 100%;
+    align-items: center; /*这个语句无效.??? */
+    overflow: hidden;
+    justify-content: center; 
+    z-index: 0;
+    align-items: center;
+}
+.cloth1,
+.cloth2,
+.cloth3,
+.cloth4{
+    position: absolute;
+    width: 2000px;
+    height: 1000px;
+    filter: drop-shadow(4px 4px 12px rgba(171, 171, 171, 0.782));
+    background-size: cover;
+    opacity: 0.5;
+    transition: 1.4s;
     
+}
+.cloth1::after,
+.cloth2::after,
+.cloth3::after,
+.cloth4::after{
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 1000px;
+    background-image: url('https://tonks-blog-1329849192.cos.ap-chengdu.myqcloud.com/QQ20240929-152303.png');
+    /* background-color: #f5f5f4; */
+    
+}
+
+
+
+
+.idcard .cloth1{
+    left: -800px;
+    transform: rotateZ(100deg);
+    overflow: hidden;
+
+}
+.idcard .cloth1::after{
+    transform: rotateZ(-100deg);
+}
+
+.idcard .cloth2{
+    left: -670px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+
+}
+.idcard .cloth2::after{
+    transform: rotateZ(100deg);
+}
+
+
+.idcard .cloth3{
+    right: -800px;
+    transform: rotateZ(105deg);
+    overflow: hidden;
+
+}
+.idcard .cloth3::after{
+    transform: rotateZ(-105deg);
+}
+
+
+.idcard .cloth4{
+    right: -870px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+
+}
+.idcard .cloth4::after{
+    transform: rotateZ(100deg);
+}
+
+.idcard:hover .cloth1{
+    left: -1450px;
+}
+
+.idcard:hover .cloth2{
+    left: -1400px;
+}
+
+.idcard:hover .cloth3{
+    right: -1400px;
+}
+
+.idcard:hover .cloth4{
+    right: -1400px;
+}
+
+#idtext666{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.IDtext{
+    opacity: 0;
+    font: bold 100px 'Comic Sans MS';
+    letter-spacing: 8px;
+    color: rgba(255, 234, 0, 0.699);
+    transition: 0.8s;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+.idcard:hover .idimage{
+    opacity: 1;
+}
+.idcard:hover .IDtext{
+    opacity: 1;
 }
 .idcard .idimage{
     border-radius: 50%;
-    width: 200px;
+    width: 300px;
     height: auto;
-    display: flex;
+    opacity: 0;
+    transition: 1.5s;
+    
 }
-.idcard div {
+/* .idcard div {
     font-size: 30px; 
     color: rgb(251, 251, 251);
     margin: 60px;
     font-weight: bold;
     text-decoration: none;
-}
+} */
 .idcard div h1 a{
     text-decoration: none;
     color: aqua;
@@ -336,6 +457,9 @@ body::before {
 .activepic .box1:hover~.box1 {
     transform: rotateY(-15deg);
 }
+#ph{
+    display: none;
+}
 
 /* 并非等号 */
 @media screen and (max-width:768px){
@@ -375,7 +499,7 @@ body::before {
 .idcard{
     background-color: rgba(87, 87, 87, 0);
     width: fit-content;
-    display: block;
+    display: none;
     border-radius: 5px; 
     position: relative;
 }
@@ -399,7 +523,19 @@ body {
     opacity: 1; 
     font-size: 15px;
     font-weight: bold;
-    color: #000000;
-    
+    color: #000000;}
+    #ph a img{
+        border-radius: 50%;
+        display: block;
+        width: 200px;
+        height: 200px;
+        
+    }
+    #ph{
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
 }
-}
+
+

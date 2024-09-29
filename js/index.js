@@ -13,11 +13,11 @@
 
     }  
 
- /*// 获取当前页面的 URL 路径
- const currentPath = window.location.pathname;
- const navLinks = document.querySelectorAll('.navbar a');
-  navLinks.forEach(link => {
-    if(link.getAttribute('href') === currentPath) {
+ /*
+ const Path = window.location.pathname;
+ const nav= document.querySelectorAll('.navbar a');
+  nav.forEach(link => {
+    if(link.getAttribute('href') === Path) {
         link.classList.add('active');  
     }
 });
