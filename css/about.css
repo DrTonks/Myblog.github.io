@@ -63,7 +63,7 @@
 .box h1{
     position: absolute;
     top: 20px;
-    
+    width: 50%;
     opacity: 0;
     transition: 0.6s;
    
@@ -178,7 +178,6 @@
         font-size: 15px;
     }
 }      
-
 
 
 
