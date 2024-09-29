@@ -254,9 +254,8 @@
     opacity: 0.4;
 } 
 .box img:hover~h1{
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+
+    opacity: 1;
 } 
 .box h1:hover{
     opacity: 1;
