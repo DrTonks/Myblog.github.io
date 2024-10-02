@@ -262,7 +262,7 @@ body::before {
 
 
 .idcard .cloth1{
-    left: -800px;
+    left: -600px;
     transform: rotateZ(100deg);
     overflow: hidden;
 
@@ -283,7 +283,7 @@ body::before {
 
 
 .idcard .cloth3{
-    right: -800px;
+    right: -650px;
     transform: rotateZ(105deg);
     overflow: hidden;
 
@@ -294,7 +294,7 @@ body::before {
 
 
 .idcard .cloth4{
-    right: -870px;
+    right: -700px;
     transform: rotateZ(-100deg);
     overflow: hidden;
 
