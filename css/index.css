@@ -403,6 +403,16 @@ body::before {
     font-family: 'songti',sans-serif;
     
 }
+
+
+.activepic .box1 .content .h2-5{ 
+    font-weight: bold;
+    color:  #000000; 
+}
+.activepic .box1 .content .h2-5-1{ 
+    font-weight: bold;
+    color:  #ffffff; 
+}
 .activepic .box1 .content .h2-4{ 
     font-weight: bold;
     color:  #ff0000; 
