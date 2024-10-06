@@ -4,7 +4,7 @@ function title(){
         title.innerText='NEW!'
     }
     else{
-        title.innerText='最近文章'
+        title.innerText='最近发布'
         
     }
 }//尝试用js搞定移动端的适配，果然比css隐藏/显示要简单...
