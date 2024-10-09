@@ -549,7 +549,7 @@ body {
 }
 
 
-@media (min-width:768px) and (max-width:1000px){
+@media (min-width:768px) and (max-width:1200px){
     .navbar{
         height: 8%;
     }
@@ -578,13 +578,14 @@ body {
     position: relative;
     justify-content: center;
     display: flex;
+    opacity: 0.8;
 }
 .activepic .box1{
     transform-style: preserve-3d; 
     backface-visibility: hidden;
     transition: 0.3s;
-    width: 95px;
-    height: 150px;
+    width: 13%;
+    height: 170px;
     margin: 10px;
     position: relative; 
     
@@ -593,8 +594,11 @@ body {
     border-radius: 50%;
     width: 200px;
     height: auto;
-    opacity: 0;
+    opacity: 0.5;
     transition: 1.5s;
     
+}
+.idcard{
+    height: fit-content;
 }
 }
