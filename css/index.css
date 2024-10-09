@@ -549,3 +549,52 @@ body {
 }
 
 
+@media (min-width:768px) and (max-width:1000px){
+    .navbar{
+        height: 8%;
+    }
+.cloth1,
+.cloth2,
+.cloth3,
+.cloth4{
+    position: absolute;
+    display: none;
+
+    
+}
+.cloth1::after,
+.cloth2::after,
+.cloth3::after,
+.cloth4::after{
+    content: "";
+    display: none;
+}
+.IDtext{
+    font: bold 50px 'Comic Sans MS';
+    letter-spacing: 8px;
+    color: rgba(255, 234, 0, 0.699);
+    transition: 0.8s;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+.activepic .box1{
+    transform-style: preserve-3d; 
+    backface-visibility: hidden;
+    transition: 0.3s;
+    width: 95px;
+    height: 150px;
+    margin: 10px;
+    position: relative; 
+    
+}
+.idcard .idimage{
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transition: 1.5s;
+    
+}
+}
