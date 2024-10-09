@@ -584,8 +584,8 @@ body {
     transform-style: preserve-3d; 
     backface-visibility: hidden;
     transition: 0.3s;
-    width: 100px;
-    height: 170px;
+    width: 25vh;
+    height: 40vh;
     margin: 10px;
     position: relative; 
     
