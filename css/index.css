@@ -78,7 +78,7 @@ body::before {
     height: 100%;
     background: url('https://tonks-blog-1329849192.cos.ap-chengdu.myqcloud.com/xiaoli2.jpg') center no-repeat; /* 背景图片 */ /*一定要打两个点！表示上一个文件夹！*//*已老实，使用腾讯云图床*/
     background-size: cover; 
-    opacity: 0.9; 
+    opacity: 1; 
     z-index: -1; 
 }
 /*移动端背景*/
